@@ -1,3 +1,5 @@
-[gd_scene format=3 uid="uid://cgxmtvpj7ala3"]
+[gd_scene format=3 uid="uid://urrmno5kkg3t"]
 
 [node name="Venus" type="Node2D"]
+
+[node name="test" type="Node2D" parent="."]
