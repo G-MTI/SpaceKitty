@@ -8,7 +8,8 @@
     <body>
         <h2>SPACE KITTY</h2>
         <hr>
-        <div class="proxy"><img href="Proxy.png"></div>
+        <div class="proxy"></div>
+        <div class="rocket"></div><br>
         <iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/4043595"><a href="https://artemis9703.itch.io/space-kitty">Space Kitty by Art3mis</a></iframe>
         <br><br><hr>
         <a href="https://github.com/G-MTI/SpaceKitty">The code!</a><br>
@@ -21,6 +22,41 @@ h2{font-size:75px; font-family:"Montserrat", sans-serif;}
 a{color:white;}
 a:hover{color:rgb(82, 203, 255);}
 hr{border:2px solid white;}
+iframe{box-shadow:1px 1px 14px 4px rgb(82,203,255);}
+.proxy {
+    width:100px;
+    height:100px;
+    background-size:cover;
+    background-position:center;
+    position:absolute;
+    background-image:url("Proxy.png"); 
+    animation: proxy 20s linear infinite;}
+.rocket {
+    z-index: 0.5;
+    width: 150px;
+    height: 150px;
+    background-image: url("https://imgs.search.brave.com/6RhA1BgrxQY0m2tIieeXp_QIDS72PkyrSn_Nns6lL6w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jbGlw/YXJ0LWxpYnJhcnku/Y29tL2ltYWdlX2dh/bGxlcnkvMTAxOTY4/LnBuZw");
+    background-size: cover;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    animation: rocketMove 10s linear infinite;
+}
+@keyframes proxy {
+    0% { top: 10px; left: 50%; transform: rotate(-180deg);}
+    25% { top: 50%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 50%); transform: rotate(180deg);}
+    75% { top: calc(100% - 50%); left: 10px; }
+    100% { top: 10px; left: 50%; transform: rotate(-180deg);}
+}
+@keyframes rocketMove {
+    0% { top: 10px; left: 50%; transform: rotate(-180deg);}
+    25% { top: 50%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 50%); transform: rotate(180deg);}
+    75% { top: calc(100% - 50%); left: 10px; }
+    100% { top: 10px; left: 50%; transform: rotate(-180deg);}
+}
         </style>
     </body>
 </html>
