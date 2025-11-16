@@ -1,13 +1,13 @@
 # Space Kitty
 
---Welcome to the Space Kitty repo!
---In this game, you’ll help Proxy, a lost space cat, escape from two planets and return safely to his spaceship.
+-Welcome to the Space Kitty repo!
+-In this game, you’ll help Proxy, a lost space cat, escape from two planets and return safely to his spaceship.
 
 ## About
---Story: Proxy is a kitty who got separated from his spaceship while exploring space. Now he’s stuck on different planets and needs your help to get back home.
---Venus Level: Inspired by Venus, the Roman goddess of love. In this level, your goal is to collect hearts while navigating.
---Jupiter Level: Based on Zeus, the god of thunder and lightning. Here, you must avoid the lightning bolts to survive.
---Each level has a different mood, challenge, and mechanic to match the mythology behind the planet.
+-Story: Proxy is a kitty who got separated from his spaceship while exploring space. Now he’s stuck on different planets and needs your help to get back home.
+-Venus Level: Inspired by Venus, the Roman goddess of love. In this level, your goal is to collect hearts while navigating.
+-Jupiter Level: Based on Zeus, the god of thunder and lightning. Here, you must avoid the lightning bolts to survive.
+-Each level has a different mood, challenge, and mechanic to match the mythology behind the planet.
 
 ## How to use
 -Use the arrow keys to move Proxy.
