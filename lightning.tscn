@@ -4,15 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://cwj187d6ltoe3" path="res://lightning.png" id="2_mwoj2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vk8o"]
+radius = 27.0
+height = 156.0
 
 [node name="Lightning" type="Area2D"]
 script = ExtResource("1_888k8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(817.375, -2152.875)
+position = Vector2(13, -6)
 scale = Vector2(0.48076922, 0.52334476)
 texture = ExtResource("2_mwoj2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(27, -19)
 shape = SubResource("CapsuleShape2D_1vk8o")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

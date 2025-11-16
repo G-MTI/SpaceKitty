@@ -1447,15 +1447,15 @@ tile_set = SubResource("TileSet_i0uay")
 position = Vector2(2724, -1366)
 zoom = Vector2(0.2, 0.2)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+[node name="player" type="CharacterBody2D" parent="."]
 position = Vector2(701, -447)
 script = ExtResource("2_i0uay")
 
-[node name="proxy" type="Sprite2D" parent="CharacterBody2D"]
+[node name="proxy" type="Sprite2D" parent="player"]
 position = Vector2(-518, -303)
 texture = ExtResource("2_si51w")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(-522.5, -262.25)
 shape = SubResource("RectangleShape2D_i0uay")
 
@@ -1470,67 +1470,46 @@ position = Vector2(-295, -1498)
 shape = SubResource("RectangleShape2D_2ww3y")
 
 [node name="Lightning" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(992, -4996)
+position = Vector2(-405, -1307)
 
 [node name="Lightning2" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(4658, -3408)
+position = Vector2(1586, -1394)
 
 [node name="Lightning3" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(3527, -4671)
+position = Vector2(4111, -1669)
 
-[node name="Lightning4" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(315, -6587)
+[node name="Lightning4" parent="." groups=["player"] instance=ExtResource("5_edcrs")]
+position = Vector2(2615, -2607)
 
 [node name="Lightning5" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(1907, -8132)
+position = Vector2(-57, -2596)
 
 [node name="Lightning6" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(754, -3359)
+position = Vector2(1076, -3440)
 
 [node name="Lightning7" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(2064, -5889)
+position = Vector2(-526, -4592)
 
 [node name="Lightning8" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(4420, -4863)
+position = Vector2(2057, -5049)
 
 [node name="Lightning9" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(-79, -12438)
+position = Vector2(4128, -3857)
 
 [node name="Lightning10" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(2358, -3815)
-
-[node name="Lightning12" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(3350, -7140)
-
-[node name="Lightning13" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(1032, -10206)
-
-[node name="Lightning11" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(4680, -6430)
+position = Vector2(3501, -6290)
 
 [node name="UDied" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(2764.5002, -1367.0001)
-scale = Vector2(9.7303915, 9.53343)
+position = Vector2(349, 628)
 texture = ExtResource("6_1vk8o")
 
-[node name="Lightning14" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(5306, -9155)
-
-[node name="Lightning15" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(3903, -10856)
-
-[node name="Lightning16" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(2776, -9396)
-
-[node name="Lightning17" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(367, -8412)
-
-[node name="Lightning18" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(771, -14330)
-
-[node name="Lightning19" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(4310, -14124)
-
-[node name="Lightning20" parent="." instance=ExtResource("5_edcrs")]
-position = Vector2(2458, -12601)
+[connection signal="body_entered" from="Lightning" to="Lightning" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning2" to="Lightning2" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning3" to="Lightning3" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning4" to="Lightning4" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning5" to="Lightning5" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning6" to="player" method="_on_lightning_6_body_entered"]
+[connection signal="body_entered" from="Lightning7" to="Lightning7" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning8" to="Lightning8" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning9" to="Lightning9" method="_on_body_entered"]
+[connection signal="body_entered" from="Lightning10" to="Lightning10" method="_on_body_entered"]
