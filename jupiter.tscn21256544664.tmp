@@ -1497,14 +1497,3 @@ position = Vector2(4128, -3857)
 
 [node name="Lightning10" parent="." instance=ExtResource("5_edcrs")]
 position = Vector2(3501, -6290)
-
-[connection signal="body_entered" from="Lightning" to="Lightning" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning2" to="Lightning2" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning3" to="Lightning3" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning4" to="Lightning4" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning5" to="Lightning5" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning6" to="player" method="_on_lightning_6_body_entered"]
-[connection signal="body_entered" from="Lightning7" to="Lightning7" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning8" to="Lightning8" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning9" to="Lightning9" method="_on_body_entered"]
-[connection signal="body_entered" from="Lightning10" to="Lightning10" method="_on_body_entered"]

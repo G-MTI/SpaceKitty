@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 	600.0
+const SPEED = 	1400.0
 const JUMP_VELOCITY = -400.0
 
 
@@ -23,3 +23,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_lightning_6_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
