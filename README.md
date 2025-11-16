@@ -15,20 +15,26 @@
 
 ## How to use
 -Use the arrow keys to move Proxy.
+
 -Press Space to jump.
 
 ## Process
 -This was our first time creating a game, so we decided to step out of our comfort zone and dive into something completely new.
+
 -We had just 36 hours to learn the basics of game development, design the levels and mechanics, and turn everything into a playable experience.
+
 -For tools, we used the Godot Engine to build the game and HTML/CSS to create a simple website to showcase it.
 
 ## Challenges
 -Understanding how Godot works: nodes, scenes, signals, collisions (basically everything).
+
 -We also spent a lot of time fixing bugs like collisions not working and the player not dying correctly.
+
 -Another challenge was commiting and downloading the game.
 
 ## Learnings
 -We (almost) learned how to build a small game from scratch and how to use Godot to create scenes, scripts and interactions.
+
 -We also improved a lot in teamwork and in problem-solving under time pressure, becoming more confident with new tools and technologies.
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
