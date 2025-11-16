@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=4 uid="uid://cifavc25tflps"]
+[gd_scene load_steps=8 format=4 uid="uid://cifavc25tflps"]
 
 [ext_resource type="Texture2D" uid="uid://dh8oiwragj1k5" path="res://jupiter.png" id="1_mvbpq"]
+[ext_resource type="Script" uid="uid://d3bbg0cdx2g5" path="res://player.gd" id="2_i0uay"]
+[ext_resource type="Texture2D" uid="uid://eijgkfumjrv8" path="res://Proxy.png" id="2_si51w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_si51w"]
 texture = ExtResource("1_mvbpq")
 texture_region_size = Vector2i(600, 600)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-304.4276, -301.2892, 301.2892, -298.1508, 311.35547, 294.67572, -300.23572, 305.7956)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-300, -300, 300, -300, 300, 300, -300, 300)
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1414,15 +1416,51 @@ texture_region_size = Vector2i(600, 600)
 37:36/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_i0uay"]
+tile_size = Vector2i(600, 600)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_si51w")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0uay"]
+size = Vector2(477, 709.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ww3y"]
+size = Vector2(284.5, 3451.5)
+
 [node name="Jupiter" type="Node2D"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -708.0
+offset_top = -3167.0
+offset_right = 6210.0
+offset_bottom = 40.0
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAASAO3/AAAAAAAAAAA3AO3/AAAAAAAAAABcAO3/AAAAAAAAAACBAO3/AAAAAAAAAADwAO3/AAAAAAAAAAAVAe3/AAAAAAAAAAA6Ae3/AAAAAAAAAABfAe3/AAAAAAAAAACmAO3/AAAAAAAAAADLAO3/AAAAAAAAAAA=")
+position = Vector2(-215, 263)
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AAAAAAAAAAAJAP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_i0uay")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2919, -1618)
+position = Vector2(2724, -1366)
 zoom = Vector2(0.2, 0.2)
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(701, -447)
+script = ExtResource("2_i0uay")
+
+[node name="proxy" type="Sprite2D" parent="player"]
+position = Vector2(-518, -303)
+texture = ExtResource("2_si51w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(-522.5, -262.25)
+shape = SubResource("RectangleShape2D_i0uay")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(5933, -1377)
+shape = SubResource("RectangleShape2D_2ww3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-356, -1246)
+shape = SubResource("RectangleShape2D_2ww3y")
